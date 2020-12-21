@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap');
+
+%widthMargin {width: 65%; margin: 0 auto;}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+.container-fluid{
+    padding: 0;
+  }
+.row{
+    padding: 0;
+    margin: 0;
+}
+.hide{
+    display: none;
+}
+
+header{
+    background-image: url(../images/nebula-2253941_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 10em;
+    position: relative;
+    #date{
+        position: absolute;
+        bottom: 2%;
+        left: 10%;
+        color: #fff;
+        h1{
+            font-weight: 600;
+            letter-spacing: .015em;
+        }
+    }
+}
+#mainContent{
+    width: 80%;
+    margin: 3em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    #itemInputSec{
+        @extend %widthMargin;
+        form{
+            border: 1px solid #c8c8c8;
+            border-radius: 5px;
+            justify-content: space-between;
+            #itemText{
+                width: 40em;
+                height: 2.5em;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                padding: 0 1em;
+                color: #545454;
+            }
+            button{
+                text-decoration: none;
+                border: none;
+                color: #fff;
+                background-color: #7b108b;
+                padding: .5em 1em;
+                border-radius: 0 5px 5px 0;
+                svg{
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+            }
+            button:hover{
+                background-color: #4e0858;
+            }
+        }
+    }
+    #listContent{
+        padding-top: 4em;
+        #noItems{
+            @extend %widthMargin;
+            text-align: center
+        }
+        #itemList{
+            @extend %widthMargin;
+            #list{
+                li{
+                    width: 44.5em;
+                    border: 1px solid #c8c8c8;
+                    margin-bottom: .5em;
+                    p{
+                        margin: 0;
+                        padding-top: .5em;
+                    }
+                    button{
+                        text-decoration: none;
+                        border: none;
+                        color: #000;
+                        background-color: #fff;
+                        padding: .5em 1em;
+                        border-left: 1px solid #c8c8c8;
+                        svg{
+                            width: 1.5em;
+                            height: 1.5em;
+                        }
+                    }
+                    button:hover{
+                        background-color: rgb(175, 42, 175);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
