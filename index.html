@@ -10,20 +10,20 @@
 <body>
     <header>
         <section id="date">
-            <h1>Monday, Dec 21, 2020</h1>
+            <h1 id="dateText"></h1>
         </section>
     </header>
     <main>
         <section id="mainContent">
             <section id="itemInputSec">
                 <div>
-                    <form action="" class="row">
+                    <div class="row" id="inputField">
                         <input type="text" name="itemText" id="itemText" class="col-11">
-                        <button class="col-1"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <button class="col-1" id="addBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                           </svg></i>
                         </button>
-                    </form>
+                    </div>
                 </div>
             </section>
             <section id="listContent">
@@ -72,6 +72,6 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="js/getTime.js"></script>
 </body>
 </html>

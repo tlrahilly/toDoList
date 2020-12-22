@@ -41,7 +41,7 @@ header{
     flex-direction: column;
     #itemInputSec{
         @extend %widthMargin;
-        form{
+        #inputField{
             border: 1px solid #c8c8c8;
             border-radius: 5px;
             justify-content: space-between;

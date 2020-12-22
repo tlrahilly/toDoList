@@ -55,7 +55,7 @@ header #date h1 {
           flex-direction: column;
 }
 
-#mainContent #itemInputSec form {
+#mainContent #itemInputSec #inputField {
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   -webkit-box-pack: justify;
@@ -63,7 +63,7 @@ header #date h1 {
           justify-content: space-between;
 }
 
-#mainContent #itemInputSec form #itemText {
+#mainContent #itemInputSec #inputField #itemText {
   width: 40em;
   height: 2.5em;
   border: none;
@@ -72,7 +72,7 @@ header #date h1 {
   color: #545454;
 }
 
-#mainContent #itemInputSec form button {
+#mainContent #itemInputSec #inputField button {
   text-decoration: none;
   border: none;
   color: #fff;
@@ -81,12 +81,12 @@ header #date h1 {
   border-radius: 0 5px 5px 0;
 }
 
-#mainContent #itemInputSec form button svg {
+#mainContent #itemInputSec #inputField button svg {
   width: 1.5em;
   height: 1.5em;
 }
 
-#mainContent #itemInputSec form button:hover {
+#mainContent #itemInputSec #inputField button:hover {
   background-color: #4e0858;
 }
 
