@@ -17,6 +17,8 @@
     display: none;
 }
 
+
+
 header{
     background-image: url(../images/nebula-2253941_1280.jpg);
     background-size: cover;
@@ -41,8 +43,7 @@ header{
     flex-direction: column;
     #itemInputSec{
         @extend %widthMargin;
-        #inputField{
-            border: 1px solid #c8c8c8;
+        .inputField{
             border-radius: 5px;
             justify-content: space-between;
             #itemText{
@@ -107,4 +108,12 @@ header{
             }
         }
     }
+}
+
+.greyBorder{
+    border: 1px solid #c8c8c8;
+}
+.redGlow{
+    border: 1px solid #af0d0d;
+    box-shadow: 0 0 4px #af0d0d;
 }
