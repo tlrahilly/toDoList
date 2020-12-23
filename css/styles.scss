@@ -13,7 +13,7 @@
     padding: 0;
     margin: 0;
 }
-.hide{
+.hide, #delete{
     display: none;
 }
 
@@ -81,14 +81,15 @@ header{
             @extend %widthMargin;
             #list{
                 li{
-                    width: 44.5em;
                     border: 1px solid #c8c8c8;
                     margin-bottom: .5em;
+                    justify-content: flex-end;
                     p{
                         margin: 0;
-                        padding-top: .5em;
+                        padding-top: .6em;
                     }
-                    button{
+                    .completedBtn, .editBtn, .deleteBtn{
+                        width: max-content;
                         text-decoration: none;
                         border: none;
                         color: #000;
