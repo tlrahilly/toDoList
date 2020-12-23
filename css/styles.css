@@ -98,11 +98,11 @@ header #date h1 {
 }
 
 #mainContent #listContent #itemList #list li {
-  border: 1px solid #c8c8c8;
   margin-bottom: .5em;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  border-radius: 5px;
 }
 
 #mainContent #listContent #itemList #list li p {
@@ -110,26 +110,35 @@ header #date h1 {
   padding-top: .6em;
 }
 
-#mainContent #listContent #itemList #list li .completedBtn, #mainContent #listContent #itemList #list li .editBtn, #mainContent #listContent #itemList #list li .deleteBtn {
+#mainContent #listContent #itemList #list li .btn {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-decoration: none;
-  border: none;
   color: #000;
-  background-color: #fff;
+  border: none;
   padding: .5em 1em;
+  border-radius: 0;
+  background-color: #fff;
   border-left: 1px solid #c8c8c8;
 }
 
-#mainContent #listContent #itemList #list li .completedBtn svg, #mainContent #listContent #itemList #list li .editBtn svg, #mainContent #listContent #itemList #list li .deleteBtn svg {
+#mainContent #listContent #itemList #list li .btn svg {
   width: 1.5em;
   height: 1.5em;
 }
 
-#mainContent #listContent #itemList #list li button:hover {
+#mainContent #listContent #itemList #list li .deleteBtn {
+  border-radius: 0 5px 5px 0;
+}
+
+#mainContent #listContent #itemList #list li .btn:hover {
   background-color: #af2aaf;
   color: #fff;
+}
+
+footer {
+  margin-top: 3em;
 }
 
 .greyBorder {
@@ -140,5 +149,33 @@ header #date h1 {
   border: 1px solid #af0d0d;
   -webkit-box-shadow: 0 0 4px #af0d0d;
           box-shadow: 0 0 4px #af0d0d;
+}
+
+.completed {
+  background-color: #d2ff9c;
+  border: 1px solid #d2ff9c;
+}
+
+.completedBtns {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  color: #515151;
+  border: none;
+  padding: .5em 1em;
+  border-radius: 0;
+  background-color: #d2ff9c;
+  border-left: 1px solid #fff;
+}
+
+.completedBtns svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.completedBtns:hover {
+  background-color: #93b36e;
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

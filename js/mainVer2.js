@@ -28,7 +28,6 @@ addBtn.addEventListener('click', () => {
     } else{
         inputField.classList.remove('greyBorder');
         inputField.classList.add('redGlow');
-        console.log('no item found');
     }
 });
 
@@ -36,7 +35,7 @@ function addToList(newItem) {
     numberOfItems++;
     let list = document.getElementById('list');
     let li = document.createElement('li');
-    li.setAttribute('class','row')
+    li.setAttribute('class','row greyBorder')
     // reveal hide the no items message and reveal the item list
     notItemsSec.classList.add('hide');
     itemList.classList.remove('hide');
@@ -55,9 +54,9 @@ function addToList(newItem) {
     editBtn.innerHTML = editSvg;
     deleteBtn.innerHTML = deleteSvg;
     // give them their classes
-    completedBtn.setAttribute('class', 'col-1 completedBtn');
-    editBtn.setAttribute('class', 'col-1 editBtn');
-    deleteBtn.setAttribute('class', 'col-1 deleteBtn');
+    completedBtn.setAttribute('class', 'col-1 btn');
+    editBtn.setAttribute('class', 'col-1 btn');
+    deleteBtn.setAttribute('class', 'col-1 btn deleteBtn');
     // add the event listeners to the buttons
     completedBtn.addEventListener('click', completedItem);
     editBtn.addEventListener('click', editItem);
@@ -86,6 +85,7 @@ function deleteItem() {
 }
 
 function editItem() {
+    numberOfItems--;
     let item = this.parentNode;
     let itemParent = item.parentNode;
     let itemText = item.children[0].innerText;
@@ -95,5 +95,47 @@ function editItem() {
 }
 
 function completedItem() {
+    let item = this.parentNode;
+    let completedBtn = this;
+    let editBtn = this.nextSibling;
+    let deleteBtn = editBtn.nextSibling;
+
+    if (item.className == 'row greyBorder'){
+        item.classList.remove('greyBorder');
+        item.classList.add('completed');
+        completedBtn.classList.remove('btn');
+        completedBtn.classList.add('completedBtns');
+        editBtn.classList.remove('btn');
+        editBtn.classList.add('completedBtns');
+        deleteBtn.classList.remove('btn');
+        deleteBtn.classList.add('completedBtns');
+        console.log(hasCompletedBtnClicked);
+    } else if (item.className == 'row completed'){
+        item.classList.add('greyBorder');
+        item.classList.remove('completed');
+        completedBtn.classList.add('btn');
+        completedBtn.classList.remove('completedBtns');
+        editBtn.classList.add('btn');
+        editBtn.classList.remove('completedBtns');
+        deleteBtn.classList.add('btn');
+        deleteBtn.classList.remove('completedBtns');
+        console.log(hasCompletedBtnClicked);
+    }
+
+}
+
+function removeCompletedItem(){
+    if (hasCompletedBtnClicked == true){
+        item.classList.add('greyBorder');
+        item.classList.remove('completed');
+        completedBtn.classList.add('btn');
+        completedBtn.classList.remove('completedBtns');
+        editBtn.classList.add('btn');
+        editBtn.classList.remove('completedBtns');
+        deleteBtn.classList.add('btn');
+        deleteBtn.classList.remove('completedBtns');
+        hasCompletedBtnClicked = false;
+        console.log(hasCompletedBtnClicked);
+    }
 
 }

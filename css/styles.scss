@@ -81,27 +81,31 @@ header{
             @extend %widthMargin;
             #list{
                 li{
-                    border: 1px solid #c8c8c8;
                     margin-bottom: .5em;
                     justify-content: flex-end;
+                    border-radius: 5px;
                     p{
                         margin: 0;
                         padding-top: .6em;
                     }
-                    .completedBtn, .editBtn, .deleteBtn{
+                    .btn{
                         width: max-content;
                         text-decoration: none;
-                        border: none;
                         color: #000;
-                        background-color: #fff;
+                        border: none;
                         padding: .5em 1em;
+                        border-radius: 0;
+                        background-color: #fff;
                         border-left: 1px solid #c8c8c8;
                         svg{
                             width: 1.5em;
                             height: 1.5em;
                         }
                     }
-                    button:hover{
+                    .deleteBtn{
+                        border-radius: 0 5px 5px 0;
+                    }
+                    .btn:hover{
                         background-color: rgb(175, 42, 175);
                         color: #fff;
                     }
@@ -111,10 +115,37 @@ header{
     }
 }
 
+footer{
+    margin-top: 3em;
+}
+
 .greyBorder{
     border: 1px solid #c8c8c8;
 }
+
 .redGlow{
     border: 1px solid #af0d0d;
     box-shadow: 0 0 4px #af0d0d;
+}
+.completed {
+    background-color: #d2ff9c;
+    border: 1px solid #d2ff9c;
+}
+.completedBtns{
+    width: max-content;
+    text-decoration: none;
+    color: #515151;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 0;
+    background-color: #d2ff9c;
+    border-left: 1px solid #fff;
+    svg{
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+.completedBtns:hover{
+    background-color: #93b36e;
+    color: #fff;
 }
